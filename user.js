@@ -1,0 +1,26 @@
+
+/**
+ * @typedef User
+ * @type {Object}
+ * @property {number} userId - The id of the user
+ * @property {string} userName - The name of the user
+ * @property {number[]} organizations - The ids of the organizations that the user is in
+ * @property {number} userKind - The kind of the user (Custom, Google, Facebook)
+ * @param {string} email - The email of the user
+ */
+export default class User{
+    /**
+     * @param {number} userId
+     * @param {string} userName
+     * @param {number[]} organizations
+     * @param {number} userKind
+     * @param {string} email
+     */
+    constructor(userId, userName, organizations, userKind, email){
+        this.userId = userId;
+        this.userName = userName;
+        this.organizations = organizations;
+        this.userKind = userKind;
+        this.email = email;
+    }
+}
