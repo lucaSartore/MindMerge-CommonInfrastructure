@@ -23,4 +23,14 @@ export default class User{
         this.userKind = userKind;
         this.email = email;
     }
+
+    verify(){
+        return this != undefined &&             //if user not undefined
+        typeof(this.userName) == string &&      //if username is string
+        typeof(this.email) == string &&         //if email is string
+        Array.isArray(this.organizations),      //if organizations is array
+        this.userName != "" &&                  //
+        this.email != "" && 
+        (userKind >= 0 && userKind < 3);
+    }
 }
