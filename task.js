@@ -1,4 +1,5 @@
-
+import TaskNote from './task_note.js';
+import TaskReportSchedule from './task_report_schedule.js';
 /**
  * @typedef Task
  * @type {Object}
@@ -68,5 +69,34 @@ export default class Task{
         this.notificationEnable = notificationEnable;
         this.childTasksIds = childTasksIds;
         this.recursivePermissionsValue = recursivePermissionsValue;
+    }
+
+    /**
+    * @returns {bool}
+    */
+    validate(){
+        var isValid = this.taskId != undefined &&
+        this.taskFatherId != undefined &&
+        this.taskOrganizationId != undefined &&
+        this.lastUpdated != undefined &&
+        this.taskName != undefined &&
+        this.taskDescription != undefined &&
+        this.taskStatus != undefined &&
+        this.taskNotes != undefined &&
+        this.taskAssignees != undefined &&
+        this.taskManager != undefined &&
+        this.taskReports != undefined &&
+        this.notificationEnable != undefined &&
+        this.childTasksIds != undefined &&
+        this.recursivePermissionsValue != undefined;
+
+        for(var i = 0; i < this.taskNotes.length; i++){
+            isValid = isValid && this.taskNotes[i].validate();
+        }
+        for(var i = 0; i < this.taskReports.length; i++){
+            isValid = isValid && this.taskReports[i].validate();
+        }
+
+        return isValid;
     }
 }
