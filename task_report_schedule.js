@@ -26,4 +26,22 @@ export default class TaskReportSchedule{
         this.nextReportDate = nextReportDate ;
         this.reportPrompt = reportPrompt;
     }
+    
+    /**
+     * @returns {boolean} - true if the task report schedule is valid, false otherwise
+     */
+    validate(){
+        return this.taskId != undefined &&
+        this.reportScheduleId != undefined &&
+        this.reportType != undefined &&
+        this.reportFrequency != undefined &&
+        this.nextReportDate != undefined &&
+        this.reportPrompt != undefined &&
+        typeof(this.taskId) == Number &&
+        typeof(this.reportScheduleId) == Number &&
+        typeof(this.reportType) == Number &&
+        typeof(this.reportFrequency) == Number &&
+        typeof(this.nextReportDate) == Date &&
+        typeof(this.reportPrompt) == String;
+    }
 }

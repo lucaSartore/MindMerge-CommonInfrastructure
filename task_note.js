@@ -21,4 +21,18 @@ export default class TaskNote{
         this.notes = notes;
         this.date = date; 
     }
+    /**
+     * @returns {boolean} - true if the task note is valid, false otherwise
+     */
+    validate(){
+        return this.noteId != undefined &&
+        this.taskId != undefined &&
+        this.notes != undefined &&
+        this.date != undefined && 
+        typeof(this.noteId) == Number &&
+        typeof(this.taskId) == Number &&
+        typeof(this.notes) == String &&
+        typeof(this.date) == Date;
+
+    }
 }

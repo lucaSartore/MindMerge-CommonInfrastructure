@@ -24,7 +24,7 @@ export default class User{
         this.email = email;
     }
 
-    verify(){
+    validate(){
         return this != undefined &&             //if user not undefined
         typeof(this.userName) == string &&      //if username is string
         typeof(this.email) == string &&         //if email is string
