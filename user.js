@@ -28,7 +28,7 @@ export default class User{
         return this != undefined &&             //if user not undefined
         typeof(this.userName) == String &&      //if username is string
         typeof(this.email) == String &&         //if email is string
-        Array.isArray(this.organizations),      //if organizations is array
+        Array.isArray(this.organizations) &&      //if organizations is array
         this.userName != "" &&                  //username has to be defined
         this.email != "" &&                     //email has to be defined
         (this.userKind >= 0 && this.userKind < 3);        //userKind (enum) has to be in range between 0 and 2

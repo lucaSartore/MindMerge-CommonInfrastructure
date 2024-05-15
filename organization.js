@@ -26,4 +26,15 @@ export default class Organization{
         this.licenseExpirationDate = licenseExpirationDate;
         this.ownerId = ownerId;
     }
+
+    validate(){
+        var currDate = new Date(); 
+        return this != undefined &&
+        typeof(this.organizationName) == String &&
+        this.organizationName != "" &&
+        this.ownerId != undefined &&
+        Array.isArray(this.userIds) &&
+        this.licenceValid &&
+        this.licenceExpirationDate < currDate; 
+    }
 }
