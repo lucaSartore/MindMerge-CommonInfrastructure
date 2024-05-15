@@ -5,4 +5,5 @@ const Errors = {
     UNAUTHORIZED: 401,
     OK: 200
 }
+
 exports.Errors = Errors;
