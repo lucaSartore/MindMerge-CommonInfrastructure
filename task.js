@@ -75,29 +75,34 @@ class Task{
     * @returns {bool}
     */
     validate(){
-        var isValid = this.taskId != undefined &&
-        this.taskFatherId != undefined &&
+        return this.taskId != undefined &&
+        (this.taskFatherId === null || typeof this.taskFatherId === "number") &&
         this.taskOrganizationId != undefined &&
+        typeof this.taskOrganizationId === "number" &&
         this.lastUpdated != undefined &&
+        this.lastUpdated instanceof Date &&
         this.taskName != undefined &&
+        typeof this.taskName === "string" &&
         this.taskDescription != undefined &&
+        typeof this.taskDescription === "string" &&
         this.taskStatus != undefined &&
+        typeof this.taskStatus === "number" &&
         this.taskNotes != undefined &&
+        Array.isArray(this.taskNotes) &&
+        this.taskNotes.every((note) => {try{return note.validate()} catch {return false}}) &&
         this.taskAssignees != undefined &&
+        Array.isArray(this.taskAssignees) &&
+        this.taskAssignees.every((assignee) => {return typeof assignee === "number"}) &&
         this.taskManager != undefined &&
+        typeof this.taskManager === "number" &&
         this.taskReports != undefined &&
+        Array.isArray(this.taskReports) &&
+        this.taskReports.every((report) => {try{return report.validate()} catch {return false}}) &&
         this.notificationEnable != undefined &&
+        typeof this.notificationEnable === "boolean" &&
         this.childTasksIds != undefined &&
-        this.recursivePermissionsValue != undefined;
-
-        for(var i = 0; i < this.taskNotes.length; i++){
-            isValid = isValid && this.taskNotes[i].validate();
-        }
-        for(var i = 0; i < this.taskReports.length; i++){
-            isValid = isValid && this.taskReports[i].validate();
-        }
-
-        return isValid;
+        this.recursivePermissionsValue != undefined &&
+        typeof this.recursivePermissionsValue === "number";
     }
 }
 
