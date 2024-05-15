@@ -29,8 +29,8 @@ export default class User{
         typeof(this.userName) == string &&      //if username is string
         typeof(this.email) == string &&         //if email is string
         Array.isArray(this.organizations),      //if organizations is array
-        this.userName != "" &&                  //
-        this.email != "" && 
-        (userKind >= 0 && userKind < 3);
+        this.userName != "" &&                  //username has to be defined
+        this.email != "" &&                     //email has to be defined
+        (userKind >= 0 && userKind < 3);        //userKind (enum) has to be in range between 0 and 2
     }
 }
