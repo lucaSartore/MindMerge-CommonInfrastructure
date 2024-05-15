@@ -30,7 +30,7 @@ export default class Organization{
     validate(){
         var currDate = new Date(); 
         return this != undefined &&
-        typeof(this.organizationName) == String &&
+        typeof(this.organizationName) == 'string' &&
         this.organizationName != "" &&
         this.ownerId != undefined &&
         Array.isArray(this.userIds) &&
