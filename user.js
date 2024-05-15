@@ -26,8 +26,8 @@ export default class User{
 
     validate(){
         return this != undefined &&             //if user not undefined
-        typeof(this.userName) == String &&      //if username is string
-        typeof(this.email) == String &&         //if email is string
+        typeof(this.userName) == 'string' &&      //if username is string
+        typeof(this.email) == 'string' &&         //if email is string
         Array.isArray(this.organizations) &&      //if organizations is array
         this.userName != "" &&                  //username has to be defined
         this.email != "" &&                     //email has to be defined
