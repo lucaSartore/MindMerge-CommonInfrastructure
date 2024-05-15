@@ -9,7 +9,7 @@
  * @property {Date} nextReportDate - The date when the report begins
  * @property {string} reportPrompt - The prompt/question for the report
  */
-export default class TaskReportSchedule{
+class TaskReportSchedule{
     /**
      * @param {number} taskId
      * @param {number} reportScheduleId
@@ -45,3 +45,4 @@ export default class TaskReportSchedule{
         typeof(this.reportPrompt) == String;
     }
 }
+exports.TaskReportSchedule = TaskReportSchedule;

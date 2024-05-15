@@ -4,7 +4,7 @@
  * @property {number} taskId - The id of the task
  * @property {TaskTree[]} childTasks - The child tasks of the task
  */
-export default class TaskTree{
+class TaskTree{
 
     /**
      * @param {number} taskId 
@@ -14,3 +14,5 @@ export default class TaskTree{
         this.childTasks = [];
     }
 }
+
+exports.TaskTree = TaskTree;

@@ -7,7 +7,7 @@
  * @property {string} notes - The note itself
  * @property {Date} date - The date when the note was last edited
  */
-export default class TaskNote{
+class TaskNote{
 
     /**
      * @param {number} noteId
@@ -36,3 +36,5 @@ export default class TaskNote{
 
     }
 }
+
+exports.TaskNote = TaskNote;

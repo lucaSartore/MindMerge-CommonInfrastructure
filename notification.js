@@ -8,7 +8,7 @@
  * @property {Date} date - The date when the notification was created
  * @property {boolean} read - If the notification was read or not
  */
-export default class Notification{
+class Notification{
     
     /**
      * @param {number} notificationId
@@ -25,3 +25,5 @@ export default class Notification{
         this.read = read;
     }
 }
+
+exports.Notification = Notification;

@@ -5,4 +5,4 @@ const Errors = {
     UNAUTHORIZED: 401,
     OK: 200
 }
-export default Errors;
+exports.Errors = Errors;

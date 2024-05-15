@@ -5,4 +5,4 @@ const reportFrequency= {
     Yearly: 4,
 }
 
-export default reportFrequency;
+exports.reportFrequency = reportFrequency;

@@ -4,4 +4,4 @@ const UserKind = {
     Facebook: 3
 }
 
-export default UserKind;
+exports.UserKind = UserKind;

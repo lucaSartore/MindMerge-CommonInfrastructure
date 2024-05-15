@@ -8,7 +8,7 @@
  * @property {number} userKind - The kind of the user (Custom, Google, Facebook)
  * @param {string} email - The email of the user
  */
-export default class User{
+class User{
     /**
      * @param {number} userId
      * @param {string} userName
@@ -34,3 +34,5 @@ export default class User{
         (this.userKind >= 0 && this.userKind < 3);        //userKind (enum) has to be in range between 0 and 2
     }
 }
+
+exports.User = User;

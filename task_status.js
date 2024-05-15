@@ -7,4 +7,4 @@ const TaskStatus= {
     Paused: 6,
 }
 
-export default TaskStatus;
+exports.TaskStatus = TaskStatus;

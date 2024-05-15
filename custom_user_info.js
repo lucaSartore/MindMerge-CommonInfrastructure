@@ -3,9 +3,10 @@
  * @typedef CustomUserInfo
  * @type {Object}
  */
-export default class CustomUserInfo{
+class CustomUserInfo{
     constructor(){
     }
 }
 
+exports.CustomUserInfo = CustomUserInfo;
 

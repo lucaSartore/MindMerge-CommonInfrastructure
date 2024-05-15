@@ -3,4 +3,4 @@ const ReportType= {
     Automatic: 2,
 }
 
-export default ReportType;
+exports.ReportType = ReportType;

@@ -18,7 +18,7 @@ import TaskReportSchedule from './task_report_schedule.js';
  * @property {number[]} childTasks - The ids of the child tasks 
  * @property {number} recusivePermissionsValue - Now far down the task tree the permissions of the task are inherited
  */
-export default class Task{
+class Task{
     /**
      * @param {number} taskId 
      * @param {number | null} taskFatherId 
@@ -100,3 +100,5 @@ export default class Task{
         return isValid;
     }
 }
+
+exports.Task = Task;

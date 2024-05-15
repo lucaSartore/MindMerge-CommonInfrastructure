@@ -2,7 +2,9 @@
  * @typedef GoogleUserInfo
  * @type {Object}
  */
-export default class GoogleUserInfo{
+class GoogleUserInfo{
     constructor(){
     }
 }
+
+exports.GoogleUserInfo = GoogleUserInfo;

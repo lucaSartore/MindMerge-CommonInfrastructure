@@ -9,7 +9,7 @@
  * @property {Date} licenseExpirationDate - The date when the license expires
  * @property {number} ownerId - The id of the owner of the organization
  */
-export default class Organization{
+class Organization{
     /**
      * @param {number} organizationId 
      * @param {string} organizationName 
@@ -38,3 +38,5 @@ export default class Organization{
         this.licenceExpirationDate < currDate; 
     }
 }
+
+exports.Organization = Organization;
