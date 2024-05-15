@@ -1,5 +1,5 @@
-import TaskNote from './task_note.js';
-import TaskReportSchedule from './task_report_schedule.js';
+const TaskNote = require('./task_note.js');
+const TaskReportSchedule = require('./task_report_schedule.js');
 /**
  * @typedef Task
  * @type {Object}

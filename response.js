@@ -6,7 +6,7 @@
  * @property {string} message - The message of the response
  * @property {T} payload - The payload of the response
  */
-export default class CustomResponse {
+class CustomResponse {
     /**
      * @param {number} statusCode
      * @param {string} message
