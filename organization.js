@@ -28,14 +28,13 @@ class Organization{
     }
 
     validate(){
-        var currDate = new Date(); 
         return this != undefined &&
         typeof(this.organizationName) == 'string' &&
         this.organizationName != "" &&
         this.ownerId != undefined &&
         Array.isArray(this.userIds) &&
-        this.licenceValid &&
-        this.licenceExpirationDate < currDate; 
+        this.userIds.every((id) => typeof(id) == 'number') &&
+        this.licenceValid 
     }
 }
 

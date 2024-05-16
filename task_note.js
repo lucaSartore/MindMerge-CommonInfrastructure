@@ -29,11 +29,10 @@ class TaskNote{
         this.taskId != undefined &&
         this.notes != undefined &&
         this.date != undefined && 
-        typeof(this.noteId) == Number &&
-        typeof(this.taskId) == Number &&
-        typeof(this.notes) == String &&
-        typeof(this.date) == Date;
-
+        typeof(this.noteId) == 'number' &&
+        typeof(this.taskId) == 'number' &&
+        typeof(this.notes) == 'string' &&
+        this.date instanceof Date;
     }
 }
 

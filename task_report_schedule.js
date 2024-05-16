@@ -37,12 +37,12 @@ class TaskReportSchedule{
         this.reportFrequency != undefined &&
         this.nextReportDate != undefined &&
         this.reportPrompt != undefined &&
-        typeof(this.taskId) == Number &&
-        typeof(this.reportScheduleId) == Number &&
-        typeof(this.reportType) == Number &&
-        typeof(this.reportFrequency) == Number &&
-        typeof(this.nextReportDate) == Date &&
-        typeof(this.reportPrompt) == String;
+        typeof(this.taskId) == 'number' &&
+        typeof(this.reportScheduleId) == 'number' &&
+        typeof(this.reportType) == 'number' &&
+        typeof(this.reportFrequency) == 'number' &&
+        this.nextReportDate instanceof Date &&
+        typeof(this.reportPrompt) == 'string';
     }
 }
 exports.TaskReportSchedule = TaskReportSchedule;
