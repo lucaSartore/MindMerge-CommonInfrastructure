@@ -34,7 +34,7 @@ class Organization{
         this.ownerId != undefined &&
         Array.isArray(this.userIds) &&
         this.userIds.every((id) => typeof(id) == 'number') &&
-        this.licenceValid 
+        this.licenseValid;
     }
 }
 
