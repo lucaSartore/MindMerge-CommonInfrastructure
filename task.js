@@ -32,7 +32,7 @@ class Task{
      * @param {number} taskManager 
      * @param {TaskReportSchedule[]} taskReports
      * @param {bool} notificationEnable
-     * @param {number[]} childTasksIds
+     * @param {number[]} childTasks
      * @param {number} recursivePermissionsValue
      */
     constructor(
@@ -48,7 +48,7 @@ class Task{
         taskManager,
         taskReports,
         notificationEnable,
-        childTasksIds,
+        childTasks,
         recursivePermissionsValue
     ){
         this.taskId = taskId;
@@ -67,7 +67,7 @@ class Task{
         this.taskManager = taskManager;
         this.taskReports = taskReports;
         this.notificationEnable = notificationEnable;
-        this.childTasksIds = childTasksIds;
+        this.childTasks = childTasks;
         this.recursivePermissionsValue = recursivePermissionsValue;
     }
 
@@ -100,7 +100,7 @@ class Task{
         this.taskReports.every((report) => {try{return report.validate()} catch {return false}}) &&
         this.notificationEnable != undefined &&
         typeof this.notificationEnable === "boolean" &&
-        this.childTasksIds != undefined &&
+        this.childTasks != undefined &&
         this.recursivePermissionsValue != undefined &&
         typeof this.recursivePermissionsValue === "number";
     }
