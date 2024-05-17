@@ -5,6 +5,20 @@ const TaskStatus= {
     Ready: 4,
     Deployed: 5,
     Paused: 6,
+
+    validate: function(status) {
+        switch (status) {
+            case TaskStatus.Idea:
+            case TaskStatus.Planned:
+            case TaskStatus.InProgress:
+            case TaskStatus.Ready:
+            case TaskStatus.Deployed:
+            case TaskStatus.Paused:
+                return true;
+            default:
+                return false;
+        }
+    }
 }
 
 exports.TaskStatus = TaskStatus;
