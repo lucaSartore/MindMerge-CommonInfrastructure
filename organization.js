@@ -31,10 +31,12 @@ class Organization{
         return this != undefined &&
         typeof(this.organizationName) == 'string' &&
         this.organizationName != "" &&
-        this.ownerId != undefined &&
+        typeof(this.organizationId) == 'number' &&
+        typeof(this.ownerId) == 'number' &&
         Array.isArray(this.userIds) &&
         this.userIds.every((id) => typeof(id) == 'number') &&
-        this.licenseValid;
+        typeof(this.licenseValid) == 'boolean' &&
+        this.licenseExpirationDate instanceof Date;
     }
 }
 
