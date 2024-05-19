@@ -24,6 +24,22 @@ class Notification{
         this.date = date;
         this.read = read;
     }
+    
+
+    /**
+     * 
+     * @returns {boolean} If the notification is valid
+     */
+    validate(){
+        return this != undefined &&
+        typeof(this.notificationId) == 'number' &&
+        typeof(this.userId) == 'number' &&
+        typeof(this.notificationText) == 'string' &&
+        this.notificationText != "" &&
+        typeof(this.date) == 'object' &&
+        this.date instanceof Date &&
+        typeof(this.read) == 'boolean';
+    }
 }
 
 exports.Notification = Notification;
