@@ -4,4 +4,4 @@ const UserKind = {
     Facebook: 3
 }
 
-exports.UserKind = UserKind;
+module.exports = {UserKind};

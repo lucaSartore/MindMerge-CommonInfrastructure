@@ -4,4 +4,4 @@ const PermissionKind = {
     Write: 2
 }
 
-export default PermissionKind;
+module.exports = {PermissionKind};

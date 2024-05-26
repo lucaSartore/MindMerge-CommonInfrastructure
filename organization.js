@@ -40,4 +40,4 @@ class Organization{
     }
 }
 
-exports.Organization = Organization;
+module.exports = {Organization};

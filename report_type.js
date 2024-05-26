@@ -3,4 +3,4 @@ const ReportType= {
     Automatic: 2,
 }
 
-exports.ReportType = ReportType;
+module.exports = {ReportType};

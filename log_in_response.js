@@ -11,5 +11,5 @@ class LogInResponse{
     }
 }
 
-exports.LogInResponse = LogInResponse;
+module.exports = {LogInResponse};
 

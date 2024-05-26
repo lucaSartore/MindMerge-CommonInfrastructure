@@ -6,4 +6,4 @@ const Errors = {
     OK: 200
 }
 
-exports.Errors = Errors;
+module.exports = {Errors};

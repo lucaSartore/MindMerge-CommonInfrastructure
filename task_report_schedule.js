@@ -45,4 +45,4 @@ class TaskReportSchedule{
         typeof(this.reportPrompt) == 'string';
     }
 }
-exports.TaskReportSchedule = TaskReportSchedule;
+module.exports = {TaskReportSchedule};

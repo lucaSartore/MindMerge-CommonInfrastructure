@@ -8,5 +8,5 @@ class CustomUserInfo{
     }
 }
 
-exports.CustomUserInfo = CustomUserInfo;
+module.exports = {CustomUserInfo};
 

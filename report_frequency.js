@@ -5,4 +5,4 @@ const reportFrequency= {
     Yearly: 4,
 }
 
-exports.reportFrequency = reportFrequency;
+module.exports = {reportFrequency};

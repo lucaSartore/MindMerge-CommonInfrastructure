@@ -36,4 +36,4 @@ class TaskNote{
     }
 }
 
-exports.TaskNote = TaskNote;
+module.exports = {TaskNote};

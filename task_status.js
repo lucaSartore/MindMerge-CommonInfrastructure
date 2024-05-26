@@ -21,4 +21,4 @@ const TaskStatus= {
     }
 }
 
-exports.TaskStatus = TaskStatus;
+module.exports = {TaskStatus};

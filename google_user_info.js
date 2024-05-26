@@ -7,4 +7,4 @@ class GoogleUserInfo{
     }
 }
 
-exports.GoogleUserInfo = GoogleUserInfo;
+module.exports = {GoogleUserInfo};

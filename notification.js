@@ -42,4 +42,4 @@ class Notification{
     }
 }
 
-exports.Notification = Notification;
+module.exports = {Notification};

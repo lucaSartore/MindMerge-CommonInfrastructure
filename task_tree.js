@@ -15,4 +15,4 @@ class TaskTree{
     }
 }
 
-exports.TaskTree = TaskTree;
+module.exports = {TaskTree};

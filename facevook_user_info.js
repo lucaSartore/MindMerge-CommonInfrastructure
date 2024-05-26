@@ -8,4 +8,4 @@ class FacebookUserInfo{
     }
 }
 
-exports.FacebookUserInfo = FacebookUserInfo;
+module.exports = {FacebookUserInfo};

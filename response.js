@@ -19,4 +19,4 @@ class CustomResponse {
     }
 }
 
-exports.CustomResponse = CustomResponse;
+module.exports = {CustomResponse};

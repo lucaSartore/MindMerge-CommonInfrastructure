@@ -10,4 +10,4 @@ class OauthLogInInfo{
     }
 }
 
-exports.OauthLogInInfo = OauthLogInInfo;
+module.exports = {OauthLogInInfo};

@@ -110,4 +110,4 @@ class Task{
     }
 }
 
-exports.Task = Task;
+module.exports = {Task};
