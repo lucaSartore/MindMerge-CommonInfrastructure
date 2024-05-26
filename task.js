@@ -79,7 +79,7 @@ class Task{
         (this.taskFatherId === null || typeof this.taskFatherId === "number") &&
         this.taskOrganizationId != undefined &&
         typeof this.taskOrganizationId === "number" &&
-        this.taskOrganizationId != NaN &&
+        !isNaN(this.taskOrganizationId )&&
         this.lastUpdated != undefined &&
         this.lastUpdated instanceof Date &&
         this.taskName != undefined &&
@@ -88,16 +88,16 @@ class Task{
         typeof this.taskDescription === "string" &&
         this.taskStatus != undefined &&
         typeof this.taskStatus === "number" &&
-        this.taskStatus != NaN &&
+        !isNaN(this.taskStatus )&&
         this.taskNotes != undefined &&
         Array.isArray(this.taskNotes) &&
         this.taskNotes.every((note) => {try{return note.validate()} catch {return false}}) &&
         this.taskAssignees != undefined &&
         Array.isArray(this.taskAssignees) &&
-        this.taskAssignees.every((assignee) => {return typeof assignee === "number" && assignee != NaN}) &&
+        this.taskAssignees.every((assignee) => {return typeof assignee === "number" && !isNaN(assignee )}) &&
         this.taskManager != undefined &&
         typeof this.taskManager === "number" &&
-        this.taskManager != NaN &&
+        !isNaN(this.taskManager )&&
         this.taskReports != undefined &&
         Array.isArray(this.taskReports) &&
         this.taskReports.every((report) => {try{return report.validate()} catch {return false}}) &&
@@ -106,7 +106,7 @@ class Task{
         this.childTasks != undefined &&
         this.recursivePermissionsValue != undefined &&
         typeof this.recursivePermissionsValue === "number" &&
-        this.recursivePermissionsValue != NaN
+        !isNaN(this.recursivePermissionsValue );
     }
 }
 
