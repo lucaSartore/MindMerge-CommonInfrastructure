@@ -59,6 +59,9 @@ class Task{
         this.taskDescription = taskDescription;
         this.taskStatus = taskStatus;
         this.taskNotes = taskNotes;
+        if(taskAssignee == undefined){
+            taskAssignee = [];
+        }
         if(taskAssignee.constructor === Array){
             this.taskAssignees = taskAssignee;
         }else{
